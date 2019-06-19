@@ -1,8 +1,9 @@
 import * as React from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
+import Contact from "../components/Contact";
+import Hero from "../components/Hero";
+import Projects from "../components/Projects";
 import { theme } from "../theme";
-import Hero from "./Hero";
-import Projects from "./Projects";
 
 const GlobalStyle = createGlobalStyle`
 *,
@@ -27,7 +28,7 @@ body {
 }
 `;
 
-const App: React.FC = () => {
+const Homepage: React.FC = () => {
   return (
     <>
       <GlobalStyle />
@@ -35,10 +36,11 @@ const App: React.FC = () => {
         <>
           <Hero />
           <Projects />
+          <Contact />
         </>
       </ThemeProvider>
     </>
   );
 };
 
-export default App;
+export default Homepage;

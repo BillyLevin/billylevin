@@ -1,18 +1,49 @@
 import * as React from "react";
+import { Link, LinkProps } from "react-router-dom";
 import styled from "styled-components";
 
 interface Props {
   title: string;
   image: string;
-  description: string;
+  url: string;
 }
 
-const ProjectContainer = styled.div`
-  max-width: 50rem;
+interface ImageProps {
+  url: string;
+}
 
-  img {
+const ProjectContainer = styled.div<LinkProps>`
+  flex: 0 0 30%;
+  margin: 3.2rem;
+  text-decoration: none;
+  outline: 0;
+
+  &:hover div:first-child::after,
+  &:focus div:first-child::after {
+    opacity: 0.5;
+  }
+`;
+
+const ProjectImage = styled.div<ImageProps>`
+  background-image: ${props => `url(${props.url})`};
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: red;
+  height: 30rem;
+  border-radius: 5px;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
     width: 100%;
-    border-radius: 3px;
+    background-color: #000;
+    opacity: 0.2;
+    border-radius: 5px;
+    transition: opacity 0.5s;
   }
 `;
 
@@ -22,11 +53,11 @@ const ProjectTitle = styled.h3`
   margin-top: 1.6rem;
 `;
 
-const Project: React.FC<Props> = ({ title, image, description }) => {
+const Project: React.FC<Props> = ({ title, image, url }) => {
   return (
-    <ProjectContainer>
-      <img src={image} alt={title} />
-      <ProjectTitle>ONE-MENU Landing Page</ProjectTitle>
+    <ProjectContainer as={Link} to={url}>
+      <ProjectImage url={image} />
+      <ProjectTitle>{title}</ProjectTitle>
     </ProjectContainer>
   );
 };
