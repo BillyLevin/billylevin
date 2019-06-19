@@ -20,7 +20,7 @@ const ProjectContainer = styled.div<LinkProps>`
 
   &:hover div:first-child::after,
   &:focus div:first-child::after {
-    opacity: 0.5;
+    opacity: 0.7;
   }
 `;
 
