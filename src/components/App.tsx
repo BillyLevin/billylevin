@@ -1,6 +1,8 @@
 import * as React from "react";
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { theme } from "../theme";
 import Hero from "./Hero";
+import Projects from "./Projects";
 
 const GlobalStyle = createGlobalStyle`
 *,
@@ -17,12 +19,11 @@ html {
 }
 
 body {
-  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
-  font-family: 'Roboto', sans-serif;
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600&display=swap');
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.6rem;
-  padding: 8rem 4rem;
   overflow-y: scroll;
-  background-color: green;
+  background-color: #eee;
 }
 `;
 
@@ -30,7 +31,12 @@ const App: React.FC = () => {
   return (
     <>
       <GlobalStyle />
-      <Hero />
+      <ThemeProvider theme={theme}>
+        <>
+          <Hero />
+          <Projects />
+        </>
+      </ThemeProvider>
     </>
   );
 };
