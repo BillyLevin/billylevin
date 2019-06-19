@@ -43,7 +43,7 @@ const ProjectImage = styled.div<ImageProps>`
     background-color: #000;
     opacity: 0.2;
     border-radius: 5px;
-    transition: opacity 0.5s;
+    transition: opacity 0.3s;
   }
 `;
 

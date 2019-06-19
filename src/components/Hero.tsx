@@ -13,7 +13,7 @@ const HeroWrapper = styled.div`
   align-items: flex-start;
   max-width: 110rem;
   margin: 0 auto;
-  padding: 6.4rem 0;
+  padding: 15rem 0;
 `;
 
 const Heading = styled.h1`

@@ -1,6 +1,8 @@
 import * as React from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import Contact from "../components/Contact";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Projects from "../components/Projects";
 import { theme } from "../theme";
@@ -34,9 +36,11 @@ const Homepage: React.FC = () => {
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <>
+          <Header />
           <Hero />
           <Projects />
           <Contact />
+          <Footer />
         </>
       </ThemeProvider>
     </>
