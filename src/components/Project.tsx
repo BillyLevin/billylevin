@@ -29,9 +29,9 @@ const ProjectImage = styled.div<ImageProps>`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-color: red;
   height: 30rem;
   border-radius: 5px;
+  border: 3px solid white;
   position: relative;
 
   &::after {
