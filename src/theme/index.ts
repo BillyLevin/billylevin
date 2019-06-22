@@ -2,6 +2,7 @@ export const theme = {
   colors: {
     primary: ["#4286f4"],
     dark: ["#222", "#333"],
-    light: ["#eee"]
+    light: ["#eee"],
+    oneMenu: ['#fcd230']
   }
 };
