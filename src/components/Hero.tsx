@@ -1,10 +1,19 @@
-import * as React from "react";
-import styled from "styled-components";
-import Attributes from "./Attributes";
-import Technologies from "./Technologies";
+import * as React from 'react';
+import styled from 'styled-components';
+import heroImg from '../img/hero.jpg';
+import Attributes from './Attributes';
+import Technologies from './Technologies';
 
-const HeroContainer = styled.div`
+interface Props {
+  image: string;
+}
+
+const HeroContainer = styled.div<Props>`
   width: 100%;
+  background-image: ${props =>
+    `linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url(${props.image})`};
+  background-size: cover;
+  background-repeat: no-repeat;
 `;
 
 const HeroWrapper = styled.div`
@@ -45,16 +54,15 @@ const SkillsContainer = styled.div`
 
 const Hero: React.FC = () => {
   return (
-    <HeroContainer>
+    <HeroContainer image={heroImg}>
       <HeroWrapper>
         <Heading>
           Hello, I'm <span>Billy.</span>
         </Heading>
         <Subtitle>
-          I'm a <Emphasis>Web Developer</Emphasis> based in London, with a
-          special interest in <Emphasis>React.</Emphasis> I love to build
-          beautiful, functional websites and applications. Here's some more
-          about me...
+          I'm a <Emphasis>Web Developer</Emphasis> based in London, with a special interest in{' '}
+          <Emphasis>React.</Emphasis> I love to build beautiful, functional websites and
+          applications. Here's some more about me...
         </Subtitle>
         <SkillsContainer>
           <Attributes />
