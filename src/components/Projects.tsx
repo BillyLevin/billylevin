@@ -1,11 +1,11 @@
-import * as React from "react";
-import styled from "styled-components";
-import booklistImg from "../img/booklist-thumbnail.png";
-import mealplannerImg from "../img/mealplanner-thumbnail.png";
-import oneMenuImg from "../img/one-menu.png";
-import Project from "./Project";
-import SectionHeading from "./SectionHeading";
-import SectionSubheading from "./SectionSubheading";
+import * as React from 'react';
+import styled from 'styled-components';
+import booklistImg from '../img/booklist-thumbnail.png';
+import mealplannerImg from '../img/mealplanner-thumbnail.png';
+import oneMenuImg from '../img/one-menu.png';
+import Project from './Project';
+import SectionHeading from './SectionHeading';
+import SectionSubheading from './SectionSubheading';
 
 const ProjectsContainer = styled.div`
   width: 100%;
@@ -27,16 +27,8 @@ const Projects: React.FC = () => {
         Here's a few things I've built so far...
       </SectionSubheading>
       <ProjectsGrid>
-        <Project
-          title="ONE-MENU Landing Page"
-          image={oneMenuImg}
-          url="/one-menu"
-        />
-        <Project
-          title="ONE-MENU Landing Page"
-          image={oneMenuImg}
-          url="/one-menu"
-        />
+        <Project title="ONE-MENU Landing Page" image={oneMenuImg} url="/one-menu" />
+        <Project title="ONE-MENU Landing Page" image={oneMenuImg} url="/one-menu" />
         <Project title="React Booklist" image={booklistImg} url="/one-menu" />
         <Project title="MealPlanner" image={mealplannerImg} url="/one-menu" />
       </ProjectsGrid>
