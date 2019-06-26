@@ -30,7 +30,7 @@ const Projects: React.FC = () => {
         <Project title="ONE-MENU Landing Page" image={oneMenuImg} url="/one-menu" />
         <Project title="ONE-MENU Landing Page" image={oneMenuImg} url="/one-menu" />
         <Project title="React Booklist" image={booklistImg} url="/one-menu" />
-        <Project title="MealPlanner" image={mealplannerImg} url="/one-menu" />
+        <Project title="MealPlanner" image={mealplannerImg} url="/mealplanner" />
       </ProjectsGrid>
     </ProjectsContainer>
   );

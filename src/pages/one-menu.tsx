@@ -23,11 +23,12 @@ const OneMenu: React.FC = () => {
       mainImg={mainImg}
     >
       <>
+        <h3>Overview</h3>
         <p>
-          During my internship at ONE-MENU, I created a new landing page for their website. There
-          were many challenges and problems to solve, and I think this helped me to become a much
-          better developer. I worked with many new technologies such as Gatsby, Storybook, Enzyme,
-          and Jest, and got my first real taste of what it was like to use Git in a professional
+          During my internship at ONE-MENU, I created the frontend for their new website. There were
+          many challenges and problems to solve, and I think this helped me to become a much better
+          developer. I worked with many new technologies such as Gatsby, Storybook, Enzyme, and
+          Jest, and got my first real taste of what it was like to use Git in a professional
           collaborative environment.
         </p>
         <br />
@@ -46,7 +47,7 @@ const OneMenu: React.FC = () => {
           <li>HTML emails</li>
         </ul>
         <br />
-        <h3>Problems and Solutions</h3>
+        <h3>Things I learned</h3>
         <ul>
           <li>hello</li>
         </ul>

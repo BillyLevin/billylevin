@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import Link from './Link';
 
 interface Props {
   title: string;
@@ -8,6 +9,8 @@ interface Props {
   tagColor: string;
   technologies?: string[];
   mainImg: string;
+  codeLink?: string;
+  demoLink?: string;
 }
 
 interface StyleProps {
@@ -100,6 +103,16 @@ const Description = styled.div<DescProps>`
   }
 `;
 
+const Links = styled.div`
+  display: flex;
+  align-self: flex-start;
+  margin-bottom: 1.6rem;
+
+  a:nth-child(1) {
+    margin-right: 0.8rem;
+  }
+`;
+
 const ProjectOverview: React.FC<Props> = ({
   primaryColor,
   secondaryColor,
@@ -107,8 +120,11 @@ const ProjectOverview: React.FC<Props> = ({
   title,
   technologies,
   mainImg,
+  codeLink,
+  demoLink,
   children,
 }) => {
+  const hasLink = !!(codeLink || demoLink);
   return (
     <>
       <Header primaryColor={primaryColor} secondaryColor={secondaryColor}>
@@ -126,6 +142,31 @@ const ProjectOverview: React.FC<Props> = ({
             ))}
           </Techs>
         )}
+        {hasLink && (
+          <Links>
+            {codeLink && (
+              <Link
+                href={codeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                primaryColor={primaryColor}
+              >
+                View Code
+              </Link>
+            )}
+            {demoLink && (
+              <Link
+                href={demoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                primaryColor={primaryColor}
+              >
+                View Demo
+              </Link>
+            )}
+          </Links>
+        )}
+
         <Description primaryColor={primaryColor}>{children}</Description>
       </ContentContainer>
     </>
