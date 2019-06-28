@@ -30,6 +30,10 @@ interface DescProps {
   primaryColor: string;
 }
 
+interface FooterProps {
+  primaryColor: string;
+}
+
 const Header = styled.header<StyleProps>`
   background-color: ${props => props.primaryColor};
   height: 30rem;
@@ -113,6 +117,12 @@ const Links = styled.div`
   }
 `;
 
+const Footer = styled.footer<FooterProps>`
+  height: 20rem;
+  background-color: ${props => props.primaryColor};
+  clip-path: polygon(0 0, 100% 60%, 100% 100%, 0 100%);
+`;
+
 const ProjectOverview: React.FC<Props> = ({
   primaryColor,
   secondaryColor,
@@ -146,6 +156,7 @@ const ProjectOverview: React.FC<Props> = ({
           <Links>
             {codeLink && (
               <Link
+                variant="secondaryButton"
                 href={codeLink}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -156,6 +167,7 @@ const ProjectOverview: React.FC<Props> = ({
             )}
             {demoLink && (
               <Link
+                variant="primaryButton"
                 href={demoLink}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -169,6 +181,7 @@ const ProjectOverview: React.FC<Props> = ({
 
         <Description primaryColor={primaryColor}>{children}</Description>
       </ContentContainer>
+      <Footer primaryColor={primaryColor} />
     </>
   );
 };

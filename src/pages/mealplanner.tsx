@@ -9,7 +9,7 @@ const MealPlanner: React.FC = () => {
       secondaryColor="#eee"
       tagColor="#eee"
       title="MealPlanner - Calorie/Protein Tracking App"
-      technologies={['HTML5', 'SCSS', 'BEM', 'Vanilla JavaScript']}
+      technologies={['HTML5', 'SCSS', 'BEM', 'JavaScript', 'Module Pattern']}
       mainImg={mainImg}
       codeLink="https://github.com/BillyLevin/mealplanner"
       demoLink="https://billylevin.github.io/mealplanner/"
@@ -35,7 +35,13 @@ const MealPlanner: React.FC = () => {
         <br />
         <h3>Things I learned</h3>
         <ul>
-          <li>hello</li>
+          <li>
+            As projects become more complex, simply using vanilla JavaScript becomes a lot more
+            difficult. It made me realise how useful frameworks and libraries can be when it comes
+            to JavaScript development
+          </li>
+          <li>How to make use of local storage to manipulate the DOM in JavaScript</li>
+          <li>SCSS is amazing!</li>
         </ul>
       </>
     </ProjectOverview>
