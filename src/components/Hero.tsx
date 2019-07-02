@@ -68,7 +68,7 @@ const Subtitle = styled.h2`
   font-size: 2rem;
   color: ${props => props.theme.colors.light[0]};
   letter-spacing: 1px;
-  margin-bottom: 3.2rem;
+  margin-bottom: 6.4rem;
 `;
 
 const ContactDetails = styled.div`
@@ -102,8 +102,6 @@ const Hero: React.FC = () => {
   return (
     <HeroContainer image={heroImg}>
       <HeroWrapper>
-        <Heading>Billy Levin</Heading>
-        <Subtitle>Web Developer. I love to build beautiful, functional web applications.</Subtitle>
         <ContactDetails>
           <ContactDetail>
             <FaGithub />
@@ -140,6 +138,8 @@ const Hero: React.FC = () => {
             </Link>
           </ContactDetail>
         </ContactDetails>
+        <Heading>Billy Levin</Heading>
+        <Subtitle>Web Developer. I love to build beautiful, functional web applications.</Subtitle>
         <Skills />
       </HeroWrapper>
     </HeroContainer>
