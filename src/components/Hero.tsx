@@ -1,8 +1,10 @@
 import * as React from 'react';
-import { FaGithub } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import styled from 'styled-components';
 import heroImg from '../img/hero.jpg';
+import { theme } from '../theme';
 import { hexToRgb } from '../utils/hexToRgb';
+import Link from './Link';
 import Skills from './Skills';
 
 interface Props {
@@ -63,49 +65,81 @@ const Heading = styled.h1`
 `;
 const Subtitle = styled.h2`
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: ${props => props.theme.colors.light[0]};
   letter-spacing: 1px;
   margin-bottom: 3.2rem;
 `;
 
-const Emphasis = styled.span`
-  color: ${props => props.theme.colors.light[0]};
-  font-weight: 400;
-`;
-
-const SkillsContainer = styled.div`
-  width: 100%;
+const ContactDetails = styled.div`
   display: flex;
-  align-items: center;
+  margin-bottom: 3.2rem;
   padding: 1.6rem;
 `;
 
-const GithubLink = styled.a`
-  color: ${props => props.theme.colors.light[0]};
-  transition: color 0.3s;
-  outline: 0;
-  margin-bottom: 3.2rem;
+const ContactDetail = styled.div`
+  display: flex;
+  align-items: center;
 
-  &:hover,
-  &:focus {
-    color: ${props => props.theme.colors.dark[0]};
+  &:not(:last-child) {
+    margin-right: 1.6rem;
   }
 
   svg {
-    width: 4.8rem;
-    height: 4.8rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    color: ${props => props.theme.colors.dark[0]};
+    margin-right: 0.8rem;
+  }
+  a:link,
+  a:visited {
+    text-decoration: none;
+    font-weight: 400;
   }
 `;
+
 const Hero: React.FC = () => {
   return (
     <HeroContainer image={heroImg}>
       <HeroWrapper>
         <Heading>Billy Levin</Heading>
         <Subtitle>Web Developer. I love to build beautiful, functional web applications.</Subtitle>
-        <GithubLink href="https://github.com/billylevin" target="_blank" rel="noopener noreferrer">
-          <FaGithub />
-        </GithubLink>
+        <ContactDetails>
+          <ContactDetail>
+            <FaGithub />
+            <Link
+              href="https://github.com/billylevin"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="link"
+              primaryColor={theme.colors.light[0]}
+            >
+              billylevin
+            </Link>
+          </ContactDetail>
+          <ContactDetail>
+            <FaEnvelope />
+            <Link
+              href="mailto:billy.levin97@gmail.com"
+              variant="link"
+              primaryColor={theme.colors.light[0]}
+            >
+              billy.levin97@gmail.com
+            </Link>
+          </ContactDetail>
+          <ContactDetail>
+            <FaLinkedin />
+            <Link
+              variant="link"
+              primaryColor={theme.colors.light[0]}
+              href="https://www.linkedin.com/in/billylevin/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              in/billylevin
+            </Link>
+          </ContactDetail>
+        </ContactDetails>
         <Skills />
       </HeroWrapper>
     </HeroContainer>

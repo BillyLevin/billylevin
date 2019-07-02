@@ -42,7 +42,7 @@ const ColTitle = styled.h4`
 
 const List = styled.ul`
   list-style: none;
-  font-weight: 400;
+  font-weight: 600;
 
   li {
     margin-bottom: 0.8rem;

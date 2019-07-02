@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import styled from 'styled-components';
 // @ts-ignore
 import cv from '../img/cv_billy_levin.pdf';
@@ -59,14 +59,6 @@ const Header: React.FC = () => {
   return (
     <HeaderContainer>
       <SocialMediaContainer>
-        <SocialMediaItem
-          hoverColor="#1da1f2"
-          href="https://twitter.com/billy_levin97"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaTwitter />
-        </SocialMediaItem>
         <SocialMediaItem
           hoverColor="#745f8c"
           href="https://github.com/billylevin"

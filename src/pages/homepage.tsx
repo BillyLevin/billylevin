@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
@@ -11,7 +10,6 @@ const Homepage: React.FC = () => {
       <Header />
       <Hero />
       <Projects />
-      <Contact />
       <Footer />
     </>
   );
