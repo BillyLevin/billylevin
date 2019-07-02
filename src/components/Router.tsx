@@ -2,8 +2,6 @@ import * as React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Homepage from '../pages/homepage';
-import MealPlanner from '../pages/mealplanner';
-import OneMenu from '../pages/one-menu';
 import { theme } from '../theme';
 
 const GlobalStyle = createGlobalStyle`
@@ -36,8 +34,6 @@ const Router: React.FC = () => {
       <ThemeProvider theme={theme}>
         <BrowserRouter>
           <Route path="/" exact component={Homepage} />
-          <Route path="/one-menu" component={OneMenu} />
-          <Route path="/mealplanner" component={MealPlanner} />
         </BrowserRouter>
       </ThemeProvider>
     </>

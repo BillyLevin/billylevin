@@ -12,7 +12,7 @@ const ProjectsContainer = styled.div`
   background-color: ${props => props.theme.colors.light[0]};
   margin: 0 auto;
   padding: 3.2rem;
-  max-width: 130rem;
+  max-width: 150rem;
 `;
 
 const Projects: React.FC = () => {
@@ -25,7 +25,6 @@ const Projects: React.FC = () => {
       <Project
         title="GymTracker"
         image={gymtrackerImg}
-        url="/one-menu"
         subtitle="Full stack app allowing you to track your exercises and meals"
         codeLink="https://github.com/billylevin/gymtracker"
         demoLink="https://www.gymtracker.xyz/"
@@ -41,7 +40,6 @@ const Projects: React.FC = () => {
       <Project
         title="ONE-MENU Landing Page"
         image={oneMenuImg}
-        url="/one-menu"
         subtitle="Full stack app allowing you to track your exercises and meals"
         demoLink="https://friendly-goodall-8021fb.netlify.com/"
         features={[
@@ -56,7 +54,6 @@ const Projects: React.FC = () => {
       <Project
         title="React Booklist"
         image={booklistImg}
-        url="/one-menu"
         subtitle="Full stack app allowing you to track your exercises and meals"
         features={[
           'A fully responsive navigation system (with a hamburger menu)',
@@ -70,7 +67,6 @@ const Projects: React.FC = () => {
       <Project
         title="MealPlanner"
         image={mealplannerImg}
-        url="/mealplanner"
         subtitle="Full stack app allowing you to track your exercises and meals"
         features={[
           'A fully responsive navigation system (with a hamburger menu)',

@@ -1,13 +1,12 @@
 import * as React from 'react';
 import { FaEyeSlash } from 'react-icons/fa';
 import styled from 'styled-components';
+import uuid from 'uuid/v4';
 import { theme } from '../theme';
 import Link from './Link';
-
 interface Props {
   title: string;
   image: string;
-  url: string;
   subtitle: string;
   demoLink?: string;
   codeLink?: string;
@@ -15,7 +14,7 @@ interface Props {
 }
 
 const ProjectContainer = styled.div`
-  margin: 3.2rem;
+  margin: 6.4rem 0;
   text-decoration: none;
   outline: 0;
   display: flex;
@@ -79,20 +78,14 @@ const NoLink = styled.div`
 
 const ProjectFeatures = styled.ul`
   padding: 1.6rem 0;
+  margin-left: 1.6rem;
+
   li {
     margin-bottom: 0.8rem;
   }
 `;
 
-const Project: React.FC<Props> = ({
-  title,
-  image,
-  url,
-  subtitle,
-  codeLink,
-  demoLink,
-  features,
-}) => {
+const Project: React.FC<Props> = ({ title, image, subtitle, codeLink, demoLink, features }) => {
   return (
     <ProjectContainer>
       <ProjectImage>
@@ -138,18 +131,9 @@ const Project: React.FC<Props> = ({
         </ProjectLinks>
         <ProjectFeatures>
           {features.map(feature => (
-            <li>{feature}</li>
+            <li key={uuid()}>{feature}</li>
           ))}
         </ProjectFeatures>
-        <Link
-          primaryColor={theme.colors.primary[0]}
-          href={url}
-          target="_blank"
-          variant="link"
-          rel="noopener noreferrer"
-        >
-          More info &rarr;
-        </Link>
       </ProjectDesc>
     </ProjectContainer>
   );

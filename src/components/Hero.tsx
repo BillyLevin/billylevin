@@ -38,14 +38,14 @@ const HeroWrapper = styled.div`
   padding: 6.4rem;
   border-radius: 3px;
   text-align: center;
-  background-image: linear-gradient(rgba(81, 66, 245, 0.5), rgba(81, 66, 245, 0.5));
+  background-image: linear-gradient(rgba(31, 95, 196, 0.5), rgba(31, 95, 196, 0.5));
 `;
 
 const Heading = styled.h1`
   color: ${props => props.theme.colors.light[0]};
   font-size: 3.2rem;
   font-weight: 600;
-  margin-bottom: 3.2rem;
+  margin-bottom: 6.4rem;
   text-transform: uppercase;
   position: relative;
 
@@ -58,7 +58,7 @@ const Heading = styled.h1`
     transform: translate(-50%, -50%);
     position: absolute;
     left: 50%;
-    top: calc(100% + 1.6rem - 1px);
+    top: calc(100% + 3.2rem - 1px);
   }
 `;
 const Subtitle = styled.h2`
