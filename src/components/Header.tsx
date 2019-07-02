@@ -1,8 +1,8 @@
-import * as React from "react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import styled from "styled-components";
+import * as React from 'react';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import styled from 'styled-components';
 // @ts-ignore
-import cv from "../img/cv_billy_levin.pdf";
+import cv from '../img/cv_billy_levin.pdf';
 
 interface Props {
   hoverColor: string;
@@ -10,10 +10,12 @@ interface Props {
 
 const HeaderContainer = styled.header`
   width: 100%;
-  background-color: ${props => props.theme.colors.dark[0]};
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
   padding: 1.6rem 3.2rem;
   display: flex;
   align-items: center;
+  position: fixed;
+  z-index: 1000;
 `;
 
 const SocialMediaContainer = styled.div`

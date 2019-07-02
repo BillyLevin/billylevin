@@ -1,5 +1,5 @@
-import * as React from "react";
-import styled from "styled-components";
+import * as React from 'react';
+import styled from 'styled-components';
 
 interface Props {
   marginLeft?: string;
@@ -11,6 +11,7 @@ const AttributesList = styled.ul`
   padding: 2.4rem;
   border-radius: 3px;
   min-width: 50rem;
+  text-align: left;
 `;
 
 const AttributesItem = styled.li<Props>`
