@@ -6,11 +6,6 @@ const Container = styled.section`
   color: ${props => props.theme.colors.dark[0]};
 `;
 
-const Title = styled.h3`
-  text-transform: uppercase;
-  margin-bottom: 3.2rem;
-`;
-
 const Table = styled.div`
   display: flex;
 `;
