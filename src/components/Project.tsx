@@ -18,6 +18,7 @@ const ProjectContainer = styled.div`
   text-decoration: none;
   outline: 0;
   display: flex;
+  align-items: center;
 `;
 
 const ProjectImage = styled.div`
@@ -62,8 +63,6 @@ const NoLink = styled.div`
   align-items: center;
   color: ${props => props.theme.colors.primary[0]};
   padding: 0.8rem 1.6rem;
-  border: ${props => '2px solid ' + props.theme.colors.primary[0]};
-  border-radius: 3px;
 
   svg {
     margin-right: 0.8rem;

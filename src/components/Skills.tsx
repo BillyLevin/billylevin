@@ -63,7 +63,7 @@ const Skills: React.FC = () => {
           <ColTitle>Backend</ColTitle>
           <List>
             <li>Node.js</li>
-            <li>Express.js </li>
+            <li>Express</li>
             <li>GraphQL</li>
             <li>PostgreSQL</li>
             <li>TypeORM</li>
