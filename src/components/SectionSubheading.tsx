@@ -1,15 +1,12 @@
-import * as React from "react";
-import styled from "styled-components";
+import * as React from 'react';
+import styled from 'styled-components';
 
 interface Props extends React.HTMLAttributes<HTMLHeadingElement> {
-  variant: "primary" | "dark" | "light";
+  textColor: string;
 }
 
 const Heading = styled.h3<Props>`
-  color: ${props =>
-    (props.variant === "primary" && props.theme.colors.primary[0]) ||
-    (props.variant === "dark" && props.theme.colors.dark[0]) ||
-    (props.variant === "light" && props.theme.colors.light[0])};
+  color: ${props => props.theme.colors[props.textColor][0]};
   text-align: center;
   font-size: 2.4rem;
   font-weight: 300;

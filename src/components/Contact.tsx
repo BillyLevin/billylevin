@@ -1,8 +1,8 @@
-import * as React from "react";
-import { FaEnvelope, FaPhone, FaTwitter } from "react-icons/fa";
-import styled from "styled-components";
-import SectionHeading from "./SectionHeading";
-import SectionSubheading from "./SectionSubheading";
+import * as React from 'react';
+import { FaEnvelope, FaPhone, FaTwitter } from 'react-icons/fa';
+import styled from 'styled-components';
+import SectionHeading from './SectionHeading';
+import SectionSubheading from './SectionSubheading';
 
 const ContactContainer = styled.div`
   width: 100%;
@@ -43,10 +43,8 @@ const ContactItem = styled.div`
 const Contact: React.FC = () => {
   return (
     <ContactContainer>
-      <SectionHeading variant="dark">Get in touch</SectionHeading>
-      <SectionSubheading variant="dark">
-        Here's some easy ways to contact me...
-      </SectionSubheading>
+      <SectionHeading textColor="dark">Get in touch</SectionHeading>
+      <SectionSubheading textColor="dark">Here's some easy ways to contact me...</SectionSubheading>
       <ContactList>
         <ContactItem>
           <FaPhone />

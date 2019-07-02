@@ -77,12 +77,13 @@ const Skills: React.FC = () => {
         <Col>
           <ColTitle>Tools</ColTitle>
           <List>
-            <li>Git</li>
+            <li>Version control (Git)</li>
             <li>TypeScript</li>
             <li>Yarn</li>
             <li>Docker</li>
             <li>Storybook</li>
             <li>Redis</li>
+            <li>Enzyme / Jest</li>
           </List>
         </Col>
       </Table>

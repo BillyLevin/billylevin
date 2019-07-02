@@ -1,63 +1,156 @@
-import * as React from "react";
-import { Link, LinkProps } from "react-router-dom";
-import styled from "styled-components";
+import * as React from 'react';
+import { FaEyeSlash } from 'react-icons/fa';
+import styled from 'styled-components';
+import { theme } from '../theme';
+import Link from './Link';
 
 interface Props {
   title: string;
   image: string;
   url: string;
+  subtitle: string;
+  demoLink?: string;
+  codeLink?: string;
+  features: string[];
 }
 
-interface ImageProps {
-  url: string;
-}
-
-const ProjectContainer = styled.div<LinkProps>`
-  flex: 0 0 30%;
+const ProjectContainer = styled.div`
   margin: 3.2rem;
   text-decoration: none;
   outline: 0;
+  display: flex;
+`;
 
-  &:hover div:first-child::after,
-  &:focus div:first-child::after {
-    opacity: 0.7;
+const ProjectImage = styled.div`
+  flex: 1;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 `;
 
-const ProjectImage = styled.div<ImageProps>`
-  background-image: ${props => `url(${props.url})`};
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  height: 30rem;
-  border-radius: 5px;
-  border: 3px solid white;
-  position: relative;
-
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: #000;
-    opacity: 0.2;
-    border-radius: 5px;
-    transition: opacity 0.3s;
-  }
+const ProjectDesc = styled.div`
+  flex: 1;
+  padding: 1.6rem 3.2rem;
 `;
 
 const ProjectTitle = styled.h3`
-  text-align: center;
-  color: ${props => props.theme.colors.light[0]};
-  margin-top: 1.6rem;
+  color: ${props => props.theme.colors.primary[0]};
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
 `;
 
-const Project: React.FC<Props> = ({ title, image, url }) => {
+const ProjectSubtitle = styled.h4`
+  color: ${props => props.theme.colors.dark[1]};
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+`;
+
+const ProjectLinks = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.6rem;
+
+  a:nth-child(1),
+  div:nth-child(1) {
+    margin-right: 0.8rem;
+  }
+`;
+
+const NoLink = styled.div`
+  display: flex;
+  align-items: center;
+  color: ${props => props.theme.colors.primary[0]};
+  padding: 0.8rem 1.6rem;
+  border: ${props => '2px solid ' + props.theme.colors.primary[0]};
+  border-radius: 3px;
+
+  svg {
+    margin-right: 0.8rem;
+  }
+
+  span {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+`;
+
+const ProjectFeatures = styled.ul`
+  padding: 1.6rem 0;
+  li {
+    margin-bottom: 0.8rem;
+  }
+`;
+
+const Project: React.FC<Props> = ({
+  title,
+  image,
+  url,
+  subtitle,
+  codeLink,
+  demoLink,
+  features,
+}) => {
   return (
-    <ProjectContainer as={Link} to={url}>
-      <ProjectImage url={image} />
-      <ProjectTitle>{title}</ProjectTitle>
+    <ProjectContainer>
+      <ProjectImage>
+        <img src={image} alt={title} />
+      </ProjectImage>
+      <ProjectDesc>
+        <ProjectTitle>{title}</ProjectTitle>
+        <ProjectSubtitle>{subtitle}</ProjectSubtitle>
+
+        <ProjectLinks>
+          {codeLink ? (
+            <Link
+              variant="secondaryButton"
+              href={codeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              primaryColor={theme.colors.primary[0]}
+            >
+              View Code
+            </Link>
+          ) : (
+            <NoLink>
+              <FaEyeSlash />
+              <span>Private Code</span>
+            </NoLink>
+          )}
+          {demoLink ? (
+            <Link
+              variant="primaryButton"
+              href={demoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              primaryColor={theme.colors.primary[0]}
+            >
+              View Demo
+            </Link>
+          ) : (
+            <NoLink>
+              <FaEyeSlash />
+              <span>No Demo</span>
+            </NoLink>
+          )}
+        </ProjectLinks>
+        <ProjectFeatures>
+          {features.map(feature => (
+            <li>{feature}</li>
+          ))}
+        </ProjectFeatures>
+        <Link
+          primaryColor={theme.colors.primary[0]}
+          href={url}
+          target="_blank"
+          variant="link"
+          rel="noopener noreferrer"
+        >
+          More info &rarr;
+        </Link>
+      </ProjectDesc>
     </ProjectContainer>
   );
 };
