@@ -46,6 +46,11 @@ const HeroWrapper = styled.div`
   border-radius: 3px;
   text-align: center;
   background-image: linear-gradient(rgba(31, 95, 196, 0.5), rgba(31, 95, 196, 0.5));
+
+  @media only screen and (max-width: ${props => props.theme.breakpoints.medium}) {
+    padding: 6.4rem 3.2rem;
+    background: transparent;
+  }
 `;
 
 const Heading = styled.h1`
@@ -55,6 +60,10 @@ const Heading = styled.h1`
   margin-bottom: 6.4rem;
   text-transform: uppercase;
   position: relative;
+
+  @media only screen and (max-width: ${props => props.theme.breakpoints.medium}) {
+    font-size: 2.4rem;
+  }
 
   &::after {
     content: '';
@@ -74,6 +83,10 @@ const Subtitle = styled.h2`
   color: ${props => props.theme.colors.light[0]};
   letter-spacing: 1px;
   margin-bottom: 6.4rem;
+
+  @media only screen and (max-width: ${props => props.theme.breakpoints.medium}) {
+    font-size: 1.8rem;
+  }
 `;
 
 const ContactDetails = styled.div`

@@ -16,6 +16,10 @@ const HeaderContainer = styled.header`
   align-items: center;
   position: fixed;
   z-index: 1000;
+
+  @media only screen and (max-width: ${props => props.theme.breakpoints.medium}) {
+    padding: 1.2rem 1.6rem;
+  }
 `;
 
 const SocialMediaContainer = styled.div`
@@ -48,6 +52,10 @@ const DownloadCV = styled.a`
   text-transform: uppercase;
   transition: color 0.3s;
   letter-spacing: 1px;
+
+  @media only screen and (max-width: ${props => props.theme.breakpoints.medium}) {
+    font-size: 1.4rem;
+  }
 
   &:hover,
   &:focus {

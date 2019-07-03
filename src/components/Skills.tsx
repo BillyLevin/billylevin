@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const Container = styled.section`
   width: 100%;
   color: ${props => props.theme.colors.dark[0]};
+  margin-bottom: 3.2rem;
 `;
 
 const Table = styled.div`
@@ -22,6 +23,10 @@ const ColTitle = styled.h4`
   letter-spacing: 1px;
   position: relative;
 
+  @media only screen and (max-width: ${props => props.theme.breakpoints.medium}) {
+    font-size: 1.4rem;
+  }
+
   &::after {
     content: '';
     display: block;
@@ -38,6 +43,10 @@ const ColTitle = styled.h4`
 const List = styled.ul`
   list-style: none;
   font-weight: 600;
+
+  @media only screen and (max-width: ${props => props.theme.breakpoints.medium}) {
+    font-size: 1.4rem;
+  }
 
   li {
     margin-bottom: 0.8rem;
