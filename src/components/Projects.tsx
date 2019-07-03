@@ -8,6 +8,10 @@ import Project from './Project';
 import SectionHeading from './SectionHeading';
 import SectionSubheading from './SectionSubheading';
 
+interface Props {
+  projectsRef: React.MutableRefObject<null>;
+}
+
 const ProjectsContainer = styled.div`
   background-color: ${props => props.theme.colors.light[0]};
   margin: 0 auto;
@@ -15,9 +19,9 @@ const ProjectsContainer = styled.div`
   max-width: 150rem;
 `;
 
-const Projects: React.FC = () => {
+const Projects: React.FC<Props> = ({ projectsRef }) => {
   return (
-    <ProjectsContainer>
+    <ProjectsContainer ref={projectsRef}>
       <SectionHeading textColor="dark">Projects</SectionHeading>
       <SectionSubheading textColor="dark">
         Here's a few things I've built so far...

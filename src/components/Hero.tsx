@@ -5,13 +5,18 @@ import heroImg from '../img/hero.jpg';
 import { theme } from '../theme';
 import { hexToRgb } from '../utils/hexToRgb';
 import Link from './Link';
+import ProjectsLink from './ProjectsLink';
 import Skills from './Skills';
 
 interface Props {
+  projectsRef: React.MutableRefObject<HTMLDivElement | null>;
+}
+
+interface StyleProps {
   image: string;
 }
 
-const HeroContainer = styled.div<Props>`
+const HeroContainer = styled.div<StyleProps>`
   width: 100%;
   background-color: ${props => props.theme.colors.primary};
   background-image: ${props => {
@@ -98,7 +103,7 @@ const ContactDetail = styled.div`
   }
 `;
 
-const Hero: React.FC = () => {
+const Hero: React.FC<Props> = ({ projectsRef }) => {
   return (
     <HeroContainer image={heroImg}>
       <HeroWrapper>
@@ -141,6 +146,7 @@ const Hero: React.FC = () => {
         <Heading>Billy Levin</Heading>
         <Subtitle>Web Developer. I love to build beautiful, functional web applications.</Subtitle>
         <Skills />
+        <ProjectsLink projectsRef={projectsRef} />
       </HeroWrapper>
     </HeroContainer>
   );
