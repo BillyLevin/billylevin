@@ -17,6 +17,10 @@ const ProjectsContainer = styled.div`
   margin: 0 auto;
   padding: 3.2rem;
   max-width: 150rem;
+
+  @media only screen and (max-width: ${props => props.theme.breakpoints.medium}) {
+    padding: 1.6rem;
+  }
 `;
 
 const Projects: React.FC<Props> = ({ projectsRef }) => {

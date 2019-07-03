@@ -10,6 +10,10 @@ const Heading = styled.h2<Props>`
   text-align: center;
   font-size: 4.8rem;
   margin-bottom: 3.2rem;
+
+  @media only screen and (max-width: ${props => props.theme.breakpoints.medium}) {
+    font-size: 4rem;
+  }
 `;
 
 const SectionHeading: React.FC<Props> = props => {

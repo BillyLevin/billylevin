@@ -9,13 +9,14 @@ interface Props {
 }
 
 const HeaderContainer = styled.header`
-  width: 100%;
+  width: 100vw;
   background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
   padding: 1.6rem 3.2rem;
   display: flex;
   align-items: center;
   position: fixed;
   z-index: 1000;
+  overflow-x: none;
 
   @media only screen and (max-width: ${props => props.theme.breakpoints.medium}) {
     padding: 1.2rem 1.6rem;

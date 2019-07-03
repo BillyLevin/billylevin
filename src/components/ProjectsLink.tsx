@@ -18,6 +18,7 @@ const Container = styled.div`
     font-size: 1.8rem;
     font-weight: 400;
     margin-bottom: 1.6rem;
+
     @media only screen and (max-width: ${props => props.theme.breakpoints.medium}) {
       font-size: 1.6rem;
     }

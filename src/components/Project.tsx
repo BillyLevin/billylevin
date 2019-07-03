@@ -19,6 +19,11 @@ const ProjectContainer = styled.div`
   outline: 0;
   display: flex;
   align-items: center;
+
+  @media only screen and (max-width: ${props => props.theme.breakpoints.medium}) {
+    margin: 3.2rem 0;
+    flex-direction: column;
+  }
 `;
 
 const ProjectImage = styled.div`
@@ -33,18 +38,31 @@ const ProjectImage = styled.div`
 const ProjectDesc = styled.div`
   flex: 1;
   padding: 1.6rem 3.2rem;
+
+  @media only screen and (max-width: ${props => props.theme.breakpoints.medium}) {
+    font-size: 1.4rem;
+    width: 100%;
+  }
 `;
 
 const ProjectTitle = styled.h3`
   color: ${props => props.theme.colors.primary[0]};
   font-size: 2.2rem;
   margin-bottom: 0.8rem;
+
+  @media only screen and (max-width: ${props => props.theme.breakpoints.medium}) {
+    font-size: 1.8rem;
+  }
 `;
 
 const ProjectSubtitle = styled.h4`
   color: ${props => props.theme.colors.dark[1]};
   font-weight: 400;
   margin-bottom: 0.8rem;
+
+  @media only screen and (max-width: ${props => props.theme.breakpoints.medium}) {
+    font-size: 1.4rem;
+  }
 `;
 
 const ProjectLinks = styled.div`

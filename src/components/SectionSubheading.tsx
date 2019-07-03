@@ -13,6 +13,11 @@ const Heading = styled.h3<Props>`
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 3.2rem;
+
+  @media only screen and (max-width: ${props => props.theme.breakpoints.medium}) {
+    font-size: 1.8rem;
+    margin-bottom: 1.6rem;
+  }
 `;
 
 const SectionSubheading: React.FC<Props> = props => {
