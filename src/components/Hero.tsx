@@ -25,7 +25,7 @@ const HeroContainer = styled.div<StyleProps>`
       const rgbaString = `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.95)`;
       return `linear-gradient(${rgbaString}, ${rgbaString}), url(${props.image})`;
     }
-    return '';
+    return 'none';
   }};
   background-size: cover;
   background-repeat: no-repeat;
