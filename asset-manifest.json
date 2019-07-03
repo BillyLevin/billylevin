@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/static/js/main.24f378c3.chunk.js",
+    "main.js.map": "/static/js/main.24f378c3.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.3203a3a0.chunk.js": "/static/js/2.3203a3a0.chunk.js",
+    "static/js/2.3203a3a0.chunk.js.map": "/static/js/2.3203a3a0.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.396eba990c144b9b2e1dba2addd1e5c7.js": "/precache-manifest.396eba990c144b9b2e1dba2addd1e5c7.js",
+    "service-worker.js": "/service-worker.js",
+    "static/media/booklist-thumbnail.png": "/static/media/booklist-thumbnail.4808fb77.png",
+    "static/media/cvBillyLevin.pdf": "/static/media/cvBillyLevin.1eee788c.pdf",
+    "static/media/gymtracker-thumbnail.png": "/static/media/gymtracker-thumbnail.0d61d724.png",
+    "static/media/hero.jpg": "/static/media/hero.27b5070d.jpg",
+    "static/media/mealplanner-thumbnail.png": "/static/media/mealplanner-thumbnail.aa1f3b6e.png",
+    "static/media/one-menu-thumbnail.png": "/static/media/one-menu-thumbnail.0ed21b80.png"
+  }
+}
