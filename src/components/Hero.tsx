@@ -33,6 +33,10 @@ const HeroContainer = styled.div<StyleProps>`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: ${props => props.theme.breakpoints.small}) {
+    background: ${props => props.theme.colors.primary[0]};
+  }
 `;
 
 const HeroWrapper = styled.div`
@@ -51,6 +55,10 @@ const HeroWrapper = styled.div`
     padding: 6.4rem 3.2rem;
     background: transparent;
   }
+
+  @media only screen and (max-width: ${props => props.theme.breakpoints.small}) {
+    padding: 6.4rem 1.6rem;
+  }
 `;
 
 const Heading = styled.h1`
@@ -63,6 +71,10 @@ const Heading = styled.h1`
 
   @media only screen and (max-width: ${props => props.theme.breakpoints.medium}) {
     font-size: 2.4rem;
+  }
+
+  @media only screen and (max-width: ${props => props.theme.breakpoints.small}) {
+    font-size: 2rem;
   }
 
   &::after {
@@ -87,20 +99,43 @@ const Subtitle = styled.h2`
   @media only screen and (max-width: ${props => props.theme.breakpoints.medium}) {
     font-size: 1.8rem;
   }
+
+  @media only screen and (max-width: ${props => props.theme.breakpoints.small}) {
+    font-size: 1.4rem;
+    margin-bottom: 3.2rem;
+  }
 `;
 
 const ContactDetails = styled.div`
   display: flex;
   margin-bottom: 3.2rem;
   padding: 1.6rem;
+
+  @media only screen and (max-width: ${props => props.theme.breakpoints.small}) {
+    flex-direction: column;
+  }
 `;
 
 const ContactDetail = styled.div`
   display: flex;
   align-items: center;
 
+  @media only screen and (max-width: ${props => props.theme.breakpoints.medium}) {
+    font-size: 1.4rem;
+  }
+
+  @media only screen and (max-width: ${props => props.theme.breakpoints.small}) {
+    font-size: 1.2rem;
+    flex-direction: column;
+  }
+
   &:not(:last-child) {
     margin-right: 1.6rem;
+
+    @media only screen and (max-width: ${props => props.theme.breakpoints.small}) {
+      margin-right: 0;
+      margin-bottom: 0.8rem;
+    }
   }
 
   svg {

@@ -20,6 +20,13 @@ const Button = styled.button`
   cursor: pointer;
   transition: all 0.3s;
 
+  @media only screen and (max-width: ${props => props.theme.breakpoints.small}) {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2rem;
+    padding: 0.4rem;
+  }
+
   &:active,
   &:focus,
   &:hover {

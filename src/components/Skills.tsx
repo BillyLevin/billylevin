@@ -9,10 +9,18 @@ const Container = styled.section`
 
 const Table = styled.div`
   display: flex;
+
+  @media only screen and (max-width: ${props => props.theme.breakpoints.small}) {
+    flex-direction: column;
+  }
 `;
 
 const Col = styled.div`
   flex: 1;
+
+  @media only screen and (max-width: ${props => props.theme.breakpoints.small}) {
+    margin-bottom: 1.6rem;
+  }
 `;
 
 const ColTitle = styled.h4`

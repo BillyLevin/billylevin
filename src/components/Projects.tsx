@@ -38,10 +38,10 @@ const Projects: React.FC<Props> = ({ projectsRef }) => {
         demoLink="https://www.gymtracker.xyz/"
         features={[
           'Built using NextJS, GraphQL/Apollo, Express, Typeorm, PostgresQL, TypeGraphQL',
-          'Full authentication using sessions and cookies',
+          'Full user authentication using sessions and cookies',
+          'Both frontend and backend form validation with Formik and Yup',
           'Yarn Workspace monorepo deployed to DigitalOcean using Docker',
           'Uses Redis to store sessions',
-          'Both frontend and backend form validation with Formik and Yup',
         ]}
       />
       <Project
