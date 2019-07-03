@@ -2,14 +2,14 @@ import * as React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import styled from 'styled-components';
 // @ts-ignore
-import cv from '../img/cv_billy_levin.pdf';
+import cv from '../img/cvBillyLevin.pdf';
 
 interface Props {
   hoverColor: string;
 }
 
 const HeaderContainer = styled.header`
-  width: 100vw;
+  width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
   padding: 1.6rem 3.2rem;
   display: flex;
