@@ -10,6 +10,10 @@ const FooterContainer = styled.footer`
   text-align: center;
   padding: 1.6rem;
 
+  @media only screen and (max-width: ${props => props.theme.breakpoints.small}) {
+    font-size: 1.2rem;
+  }
+
   a:link,
   a:visited {
     text-decoration: none;
