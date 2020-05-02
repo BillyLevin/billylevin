@@ -3,14 +3,15 @@ import styled from 'styled-components';
 
 const Container = styled.section`
   width: 100%;
-  color: ${props => props.theme.colors.dark[0]};
+  color: ${(props) => props.theme.colors.dark[0]};
   margin-bottom: 3.2rem;
 `;
 
 const Table = styled.div`
   display: flex;
 
-  @media only screen and (max-width: ${props => props.theme.breakpoints.small}) {
+  @media only screen and (max-width: ${(props) =>
+      props.theme.breakpoints.small}) {
     flex-direction: column;
   }
 `;
@@ -18,7 +19,8 @@ const Table = styled.div`
 const Col = styled.div`
   flex: 1;
 
-  @media only screen and (max-width: ${props => props.theme.breakpoints.small}) {
+  @media only screen and (max-width: ${(props) =>
+      props.theme.breakpoints.small}) {
     margin-bottom: 1.6rem;
   }
 `;
@@ -26,12 +28,13 @@ const Col = styled.div`
 const ColTitle = styled.h4`
   margin-bottom: 3.2rem;
   text-transform: uppercase;
-  color: ${props => props.theme.colors.light[0]};
+  color: ${(props) => props.theme.colors.light[0]};
   font-weight: 600;
   letter-spacing: 1px;
   position: relative;
 
-  @media only screen and (max-width: ${props => props.theme.breakpoints.medium}) {
+  @media only screen and (max-width: ${(props) =>
+      props.theme.breakpoints.medium}) {
     font-size: 1.4rem;
   }
 
@@ -40,7 +43,7 @@ const ColTitle = styled.h4`
     display: block;
     width: 3rem;
     height: 2px;
-    background-color: ${props => props.theme.colors.light[0]};
+    background-color: ${(props) => props.theme.colors.light[0]};
     transform: translate(-50%, -50%);
     position: absolute;
     left: 50%;
@@ -52,7 +55,8 @@ const List = styled.ul`
   list-style: none;
   font-weight: 600;
 
-  @media only screen and (max-width: ${props => props.theme.breakpoints.medium}) {
+  @media only screen and (max-width: ${(props) =>
+      props.theme.breakpoints.medium}) {
     font-size: 1.4rem;
   }
 
@@ -70,10 +74,11 @@ const Skills: React.FC = () => {
           <List>
             <li>HTML5</li>
             <li>CSS3 &amp; SCSS</li>
-            <li>ES6 JavaScript</li>
+            <li>JavaScript</li>
             <li>React / Gatsby / NextJS</li>
             <li>Styled Components</li>
-            <li>Formik</li>
+            <li>react-testing-library</li>
+            <li>Svelte</li>
           </List>
         </Col>
         <Col>
@@ -94,8 +99,7 @@ const Skills: React.FC = () => {
             <li>Yarn</li>
             <li>Docker</li>
             <li>Storybook</li>
-            <li>Redis</li>
-            <li>Enzyme / Jest</li>
+            <li>Jest</li>
           </List>
         </Col>
       </Table>

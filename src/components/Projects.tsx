@@ -13,12 +13,13 @@ interface Props {
 }
 
 const ProjectsContainer = styled.div`
-  background-color: ${props => props.theme.colors.light[0]};
+  background-color: ${(props) => props.theme.colors.light[0]};
   margin: 0 auto;
   padding: 3.2rem;
   max-width: 150rem;
 
-  @media only screen and (max-width: ${props => props.theme.breakpoints.medium}) {
+  @media only screen and (max-width: ${(props) =>
+      props.theme.breakpoints.medium}) {
     padding: 1.6rem;
   }
 `;
@@ -48,14 +49,13 @@ const Projects: React.FC<Props> = ({ projectsRef }) => {
         title="ONE-MENU Landing Page"
         image={oneMenuImg}
         subtitle="Frontend for the ONE-MENU website"
-        demoLink="https://friendly-goodall-8021fb.netlify.com/"
         features={[
           'Built using Gatsby for React',
           'A multi-step form that makes use of local storage so a user can pick up from where they left off',
           'Parallax scrolling effect to showcase different features of the app in one location',
           'Implemented unit tests on appropriate functions with Enzyme/Jest',
           'Smooth scrolling navigation to different parts of the page',
-          'Uses Storybook to develop UI components in isolation',
+          'Used Storybook to develop UI components in isolation',
         ]}
       />
       <Project
