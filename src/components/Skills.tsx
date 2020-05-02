@@ -96,7 +96,7 @@ const Skills: React.FC = () => {
           <List>
             <li>Version control (Git)</li>
             <li>TypeScript</li>
-            <li>Yarn</li>
+            <li>Redux</li>
             <li>Docker</li>
             <li>Storybook</li>
             <li>Jest</li>
