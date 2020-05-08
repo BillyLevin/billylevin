@@ -36,6 +36,7 @@ const Projects: React.FC<Props> = ({ projectsRef }) => {
         image={gymtrackerImg}
         subtitle="Full stack app allowing you to track your exercises and meals"
         codeLink="https://github.com/billylevin/gymtracker"
+        demoLink="https://www.gymtracker.xyz"
         features={[
           'Built using NextJS, GraphQL/Apollo, Express, Typeorm, PostgresQL, TypeGraphQL',
           'Full user authentication using sessions and cookies',
