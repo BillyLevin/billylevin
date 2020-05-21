@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bb1a175b39abc5bbad7ac4d91fb8aa16",
+    "revision": "487f6b379bdad396c08c66839bdcf041",
     "url": "/portfolio/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/js/2.554d8e8a.chunk.js"
   },
   {
-    "revision": "f7a10663ad7361428913",
-    "url": "/portfolio/static/js/main.460c8be2.chunk.js"
+    "revision": "ad7453dabf71c620ffea",
+    "url": "/portfolio/static/js/main.bd7763e2.chunk.js"
   },
   {
     "revision": "53ebc025fca807d4dbea",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/booklist-thumbnail.4808fb77.png"
   },
   {
-    "revision": "e5a3197d9fc466133182bd4b0fec5e85",
-    "url": "/portfolio/static/media/cvBillyLevin.e5a3197d.pdf"
+    "revision": "02bc36a9a84fea12589edfe7711e7241",
+    "url": "/portfolio/static/media/cvBillyLevin.02bc36a9.pdf"
   },
   {
     "revision": "0d61d724cb0c14dea6214bf6ce37eb1e",
